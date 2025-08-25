@@ -11,5 +11,8 @@ $routes->get('/noticias', 'Vistas::v_noticias');
 $routes->get('/contactanos', 'Vistas::v_contactanos');
 $routes->get('/productos', 'Vistas::v_productos');
 $routes->get('/unete','Vistas::v_unete');
+$routes->get('/noticias/noticia1', 'Vistas::v_detalle_noticia');
+
+
 
 

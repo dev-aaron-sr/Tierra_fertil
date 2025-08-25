@@ -28,4 +28,8 @@ class Vistas extends BaseController
     {
         return view('v_header').view('v_unete').view('v_footer');
     }
+    public function v_detalle_noticia(): string
+    {
+        return view('v_header').view('v_detalle_noticia').view('v_footer');
+    }
 }
