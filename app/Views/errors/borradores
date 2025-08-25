@@ -1,0 +1,933 @@
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+  <div class="container texto_navbar">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+    <img src="<?= base_url() ?>/resources/assets/logo_tierraFertil.svg" width="130" height="130" alt="Logo Tierra Fértil" class="me-2">
+    <div>
+        <span class="text-green-yellow d-block">Cooperativa agrícola</span>
+        <span class="text-green-yellow d-block">de usuarios</span>
+        <span class="text-success d-block">Tierra Fértil</span>
+    </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#hero">Inicio</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#about">¿Quienes somos?</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Noticias</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contactanos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section (Carousel) -->
+<section class="hero">
+  <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Imágenes del carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="<?= base_url() ?>/resources/assets/fondo_banner.png" class="d-block w-100" alt="Fondo de Tierra Fértil 1" style="object-fit: cover; height: 100%;">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Bienvenidos a Tierra Fértil</h1>
+          <p>Impulsando el crecimiento sostenible de nuestras comunidades agrícolas.</p>
+          <a href="#services" class="btn btn-success btn-lg mt-3">Descubre más</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="<?= base_url() ?>/resources/assets/fondo_banner.png" class="d-block w-100" alt="Fondo de Tierra Fértil 2" style="object-fit: cover; height: 100%;">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Juntos por un futuro más verde</h1>
+          <p>Apoyando a los agricultores para alcanzar nuevas metas.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="<?= base_url() ?>/resources/assets/fondo_banner.png" class="d-block w-100" alt="Fondo de Tierra Fértil 3" style="object-fit: cover; height: 100%;">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Cosechando el éxito juntos</h1>
+          <p>Brindando recursos y capacitación para mejorar la producción.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles del carousel -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+</section>
+
+
+aqui el css
+
+/* Navbar */
+#navbar {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  /* Carrusel con gradiente en la parte superior */
+  .hero {
+    position: relative;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Altura del gradiente */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Gradiente blanco a transparente */
+    z-index: 5;
+  }
+  
+  .carousel-inner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+
+
+  <div class="row mt-3 mb-3">
+    <!-- Contact Form -->
+    <div class="col-lg-6 mx-auto">
+        <form>
+            <div class="col-md-12 mb-3">
+                <label for="dni_empleado" class="form-label">Nombres</label>
+                <div class="input-group shadow-sm rounded">
+                    <span class="input-group-text"><i class="bi bi-person-vcard"></i></span>
+                    <input type="text" name="dni_empleado" id="dni_empleado" class="form-control" required>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <label for="correo_electronico_empleado" class="form-label">Correo</label>
+                <div class="input-group shadow-sm rounded">
+                    <span class="input-group-text"><i class="bi bi-envelope-at"></i></span>
+                    <input type="text" name="correo_electronico_empleado" id="correo_electronico_empleado"
+                        class="form-control" required>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <label for="celular_empleado" class="form-label">Telefono</label>
+                <div class="input-group shadow-sm rounded">
+                    <span class="input-group-text"><i class="bi bi-phone-fill"></i></span>
+                    <input type="text" name="celular_empleado" id="celular_empleado" class="form-control"
+                        required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Mensaje o consulta</label>
+                <textarea class="shadow-sm rounded form-control" id="message" rows="4"
+                    placeholder="Escribe tu mensaje" required></textarea>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-success btn-lg">Enviar mensaje o consulta</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-6 mx-auto mt-3">
+        <!-- Viñeta con diálogo -->
+        <div class="alert alert-success d-flex align-items-center shadow-sm p-3 mb-4 rounded-3">
+            <i class="bi bi-chat-left-text fs-3 me-3 text-success"></i>
+            <div>
+                <strong>Deja tu mensaje o consulta:</strong><br>
+                En menos de 24 horas te responderemos. ¡Gracias por su preferencia!
+            </div>
+        </div>
+        <div class="text-center">
+            <img src="<?= base_url() ?>/resources/assets/logo_atencion_cliente.png" alt="Atención al cliente"
+                class="img-fluid" style="max-width: 350px;">
+        </div>
+    </div>
+</div>
+
+
+<section id="quienes-somos" class="py-5 bg-light">
+  <div class="container">
+    <!--div class="row justify-content-center text-center mb-4">
+      <div class="col-md-8">
+        <h2 class="fw-bold mb-3">Quiénes Somos</h2>
+        <p class="text-black">
+          En <span class="text-success fw-semibold">Tierra Fértil</span>, somos una cooperativa agraria comprometida con la sostenibilidad, la innovación, y el crecimiento de nuestras comunidades rurales. Trabajamos juntos para cultivar un futuro más verde y próspero.
+        </p>
+      </div>
+    </div-->
+    <div class="row align-items-center">
+      <!-- Imagen -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <img 
+          src="https://plus.unsplash.com/premium_photo-1674624682232-c9ced5360a2e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGllcnJhcyUyMGRlJTIwY3VsdGl2b3xlbnwwfHwwfHx8MA%3D%3D" 
+          alt="Cultivo sostenible" 
+          class="img-fluid rounded shadow"
+        >
+      </div>
+      <!-- Contenido -->
+      <div class="col-lg-6">
+        <h3 class="fw-semibold text-success">Nuestra Misión</h3>
+        <p class="text-muted mb-4">
+          Promovemos el desarrollo sostenible mediante la producción responsable y la implementación de prácticas innovadoras que benefician tanto a los agricultores como al medio ambiente.
+        </p>
+        <h3 class="fw-semibold text-success">Nuestros Valores</h3>
+        <ul class="list-unstyled text-muted">
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-check-circle-fill text-success me-3"></i>
+            <span>Trabajo en equipo y colaboración.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-check-circle-fill text-success me-3"></i>
+            <span>Compromiso con la sostenibilidad.</span>
+          </li>
+          <li class="d-flex align-items-start">
+            <i class="bi bi-check-circle-fill text-success me-3"></i>
+            <span>Innovación en cada paso que damos.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Testimonios con Carrusel -->
+    <div class="row justify-content-center text-center mt-5">
+      <div class="col-md-8">
+          <h3 class="fw-bold mb-4">Testimonios</h3>
+          <div id="testimoniosCarrusel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <!-- Testimonio 1 -->
+              <div class="carousel-item active">
+              <div class="card border-0 shadow-sm p-4">
+                  <div class="row align-items-center">
+                  <!-- Comentario -->
+                  <div class="col-lg-9">
+                      <p class="text-muted fst-italic mb-3">
+                      "Gracias a Tierra Fértil, mi familia ahora tiene acceso a herramientas y conocimientos para maximizar nuestra producción sin dañar el medio ambiente."
+                      </p>
+                      <h5 class="fw-semibold mb-0">Juan Pérez</h5>
+                      <span class="text-muted small">Agricultor asociado</span>
+                  </div>
+                  <!-- Imagen -->
+                  <div class="col-lg-3 text-center">
+                      <img 
+                      src="https://www.shutterstock.com/image-photo/portrait-senior-farmer-corn-field-600nw-2514319495.jpg" 
+                      alt="Juan Pérez" 
+                      class="rounded-circle img-fluid shadow"
+                      >
+                  </div>
+                  </div>
+              </div>
+              </div>
+              <!-- Testimonio 2 -->
+              <div class="carousel-item">
+              <div class="card border-0 shadow-sm p-4">
+                  <div class="row align-items-center">
+                  <!-- Comentario -->
+                  <div class="col-lg-9">
+                      <p class="text-muted fst-italic mb-3">
+                      "Unirnos a Tierra Fértil nos permitió diversificar nuestros cultivos y mejorar la calidad de vida en nuestra comunidad."
+                      </p>
+                      <h5 class="fw-semibold mb-0">María López</h5>
+                      <span class="text-muted small">Agricultora asociada</span>
+                  </div>
+                  <!-- Imagen -->
+                  <div class="col-lg-3 text-center">
+                      <img 
+                      src="https://img.freepik.com/foto-gratis/anciana-sosteniendo-canasta-llena-verduras_23-2148580035.jpg" 
+                      alt="María López" 
+                      class="rounded-circle img-fluid shadow"
+                      >
+                  </div>
+                  </div>
+              </div>
+              </div>
+              <!-- Testimonio 3 -->
+              <div class="carousel-item">
+              <div class="card border-0 shadow-sm p-4">
+                  <div class="row align-items-center">
+                  <!-- Comentario -->
+                  <div class="col-lg-9">
+                      <p class="text-muted fst-italic mb-3">
+                      "Estamos orgullosos de ser parte de una cooperativa que valora tanto la sostenibilidad como el bienestar de sus socios."
+                      </p>
+                      <h5 class="fw-semibold mb-0">Carlos Rodríguez</h5>
+                      <span class="text-muted small">Agricultor asociado</span>
+                  </div>
+                  <!-- Imagen -->
+                  <div class="col-lg-3 text-center">
+                      <img 
+                      src="https://static.vecteezy.com/ti/fotos-gratis/t1/30745389-retrato-agricultor-colheita-legumes-ai-generativo-foto.jpg" 
+                      alt="Carlos Rodríguez" 
+                      class="rounded-circle img-fluid shadow"
+                      >
+                  </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+          <!-- Controles del carrusel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimoniosCarrusel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimoniosCarrusel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+          </button>
+          </div>
+      </div>
+      </div>
+  
+
+
+
+
+      //esto es de Contactanos
+
+
+      <div class="row g-4">
+        <!-- Contact Details -->
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-geo-alt fs-3 text-success"></i>
+                    </div>
+                    <h5 class="card-title">Nuestra Ubicación</h5>
+                    <p class="card-text text-muted">
+                        Calle Principal 123, Sector Agrario<br> Ciudad, País
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-envelope fs-3 text-success"></i>
+                    </div>
+                    <h5 class="card-title">Correo Electrónico</h5>
+                    <p class="card-text text-muted">
+                        <a href="mailto:info@tierrafertil.com.pe"
+                            class="text-decoration-none text-success">info@tierrafertil.com.pe</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-telephone fs-3 text-success"></i>
+                    </div>
+                    <h5 class="card-title">Teléfono</h5>
+                    <p class="card-text text-muted">
+                        <a href="tel:+1234567890" class="text-decoration-none text-success">+12 345 678 90</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    //esto es parte de Unete
+
+
+
+
+    
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content: Title and Description -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="fw-bold text-success">Únete a Nuestra Cooperativa</h2>
+        <p class="text-muted mb-4">
+          Descubre los beneficios de ser parte de nuestra cooperativa y contribuye al desarrollo sostenible. 
+          A continuación, encontrarás nuestros estatutos, reglas y procedimientos que debes seguir para unirte.
+        </p>
+        <a href="ruta_al_pdf/estatutos.pdf" class="btn btn-success shadow" download>
+          <i class="bi bi-file-earmark-pdf me-2"></i> Descargar Estatutos
+        </a>
+      </div>
+      
+      <!-- Right Content: Rules and Procedures -->
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="fw-bold text-success">Reglas y Procedimientos</h5>
+            <ul class="list-unstyled text-muted">
+              <li class="mb-3">
+                <i class="bi bi-check-circle text-success me-2"></i> Cumplir con los requisitos establecidos en los estatutos.
+              </li>
+              <li class="mb-3">
+                <i class="bi bi-check-circle text-success me-2"></i> Presentar la documentación necesaria en nuestras oficinas.
+              </li>
+              <li class="mb-3">
+                <i class="bi bi-check-circle text-success me-2"></i> Asistir a una reunión introductoria para conocer los beneficios.
+              </li>
+              <li class="mb-3">
+                <i class="bi bi-check-circle text-success me-2"></i> Firmar el acuerdo de membresía.
+              </li>
+            </ul>
+            <p class="text-muted small">
+              Si necesitas más información, no dudes en contactarnos. Estamos aquí para guiarte en el proceso.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center" style="margin-top: 20px;">
+    <h5 class="text-success fw-bold">Síguenos en</h5>
+    <div class="d-flex justify-content-center align-items-center mt-3 gap-3">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com" target="_blank" class="text-decoration-none">
+            <div class="d-flex align-items-center justify-content-center rounded-circle bg-light shadow p-3" 
+                 style="width: 60px; height: 60px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+                     alt="Facebook Logo" class="img-fluid" style="width: 30px;">
+            </div>
+            <small class="d-block mt-1 text-dark">Facebook</small>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com" target="_blank" class="text-decoration-none">
+            <div class="d-flex align-items-center justify-content-center rounded-circle bg-light shadow p-3" 
+                 style="width: 60px; height: 60px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
+                     alt="Instagram Logo" class="img-fluid" style="width: 30px;">
+            </div>
+            <small class="d-block mt-1 text-dark">Instagram</small>
+        </a>
+    </div>
+    </div>
+</section>
+
+
+!-- esto es del Inicio
+<!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold">¿Quiénes somos?</h2>
+    <p class="lead mt-3">En Tierra Fértil, somos una cooperativa agraria comprometida con el desarrollo sostenible, apoyando a agricultores locales con recursos, capacitación y acceso a mercados.</p>
+  </div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Texto -->
+      <div class="col-md-6 text-center text-md-start">
+        <h2 class="fw-bold">¿Quiénes somos?</h2>
+        <p class="lead mt-3">En Tierra Fértil, somos una cooperativa agraria comprometida con el desarrollo sostenible, apoyando a agricultores locales con recursos, capacitación y acceso a mercados.</p>
+      </div>
+      <!-- Imagen -->
+      <div class="col-md-6 text-center">
+        <img src="https://via.placeholder.com/500x300" alt="Imagen ilustrativa" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center">Nuestros Servicios</h2>
+    <div class="row mt-4">
+      <div class="col-md-4 text-center">
+        <i class="service-icon bi bi-capslock-fill"></i>
+        <h4 class="mt-3">Asesoramiento Técnico</h4>
+        <p>Ofrecemos orientación especializada para mejorar la producción agrícola de nuestros socios.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <i class="service-icon bi bi-basket"></i>
+        <h4 class="mt-3">Comercialización</h4>
+        <p>Facilitamos el acceso a mercados para maximizar el valor de los productos agrícolas.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <i class="service-icon bi bi-people"></i>
+        <h4 class="mt-3">Capacitación</h4>
+        <p>Organizamos talleres y cursos para empoderar a nuestros agricultores con conocimientos modernos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+!-- de la seccion de Servicios
+<!-- Services Section -->
+<section id="services" class="py-5 position-relative text-white" style="background: url('https://img.freepik.com/foto-gratis/hermosa-vista-campo-cubierto-hierba-verde-capturado-canggu-bali_181624-7666.jpg?t=st=1736706880~exp=1736710480~hmac=6a32f354f612142218b8560c9a940dd6d0cb9e5607b4ac74cd6773ff553c54d7&w=1380') center/cover no-repeat fixed;">
+  <div class="container position-relative z-index-1">
+    <h2 class="fw-bold text-center mb-5 text-dark">Nuestros Servicios</h2>
+    <div class="row">
+      <!-- Servicio 1 -->
+      <div class="col-md-6 d-flex align-items-center mb-4">
+        <div class="icon-box text-center text-md-start p-4 bg-dark bg-opacity-50 rounded">
+          <i class="service-icon bi bi-capslock-fill fs-2 text-success"></i>
+          <h4 class="mt-3">Asesoramiento Técnico</h4>
+          <p class="mb-0">Ofrecemos orientación especializada para mejorar la producción agrícola de nuestros socios.</p>
+        </div>
+      </div>
+      <!-- Servicio 2 -->
+      <div class="col-md-6 d-flex align-items-center mb-4">
+        <div class="icon-box text-center text-md-start p-4 bg-dark bg-opacity-50 rounded">
+          <i class="service-icon bi bi-basket fs-2 text-warning"></i>
+          <h4 class="mt-3">Comercialización</h4>
+          <p class="mb-0">Facilitamos el acceso a mercados para maximizar el valor de los productos agrícolas.</p>
+        </div>
+      </div>
+      <!-- Servicio 3 -->
+      <div class="col-md-6 d-flex align-items-center mb-4">
+        <div class="icon-box text-center text-md-start p-4 bg-dark bg-opacity-50 rounded">
+          <i class="service-icon bi bi-people fs-2 text-info"></i>
+          <h4 class="mt-3">Capacitación</h4>
+          <p class="mb-0">Organizamos talleres y cursos para empoderar a nuestros agricultores con conocimientos modernos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Overlay -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-25"></div>
+</section>
+
+
+!--esta era la segunda version del efecto paralax scrolling o bueno más que una segunda parte, era una segunda version
+
+<!-- Services Section -->
+<section id="services" class="py-5 position-relative text-white" style="background: url('http://localhost:82/tierrafertil/resources/assets/46614.jpg') center/cover no-repeat fixed;">
+  <div class="container position-relative z-index-1">
+    <h2 class="fw-bold text-center text-white mb-5">Nuestros Servicios</h2>
+    <div class="row">
+      <!-- Servicio 1 -->
+      <div class="col-md-6 d-flex align-items-center mb-4">
+        <div class="icon-box d-flex align-items-center p-4 bg-dark bg-opacity-75 rounded">
+          <i class="service-icon bi bi-capslock-fill fs-1 text-success me-4"></i>
+          <div>
+            <h4 class="mt-0">Asesoramiento Técnico</h4>
+            <p class="mb-0">Ofrecemos orientación especializada para mejorar la producción agrícola de nuestros socios.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 2 -->
+      <div class="col-md-6 d-flex align-items-center mb-4">
+        <div class="icon-box d-flex align-items-center p-4 bg-dark bg-opacity-75 rounded">
+          <i class="service-icon bi bi-basket fs-1 text-warning me-4"></i>
+          <div>
+            <h4 class="mt-0">Comercialización</h4>
+            <p class="mb-0">Facilitamos el acceso a mercados para maximizar el valor de los productos agrícolas.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 3 -->
+      <div class="col-md-6 d-flex align-items-center mb-4">
+        <div class="icon-box d-flex align-items-center p-4 bg-dark bg-opacity-75 rounded">
+          <i class="service-icon bi bi-people fs-1 text-info me-4"></i>
+          <div>
+            <h4 class="mt-0">Capacitación</h4>
+            <p class="mb-0">Organizamos talleres y cursos para empoderar a nuestros agricultores con conocimientos modernos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Overlay -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-25"></div>
+</section>
+
+
+!---esta es la version 3 que ya esta muy bien, pero por si acaso
+<!-- Sección de Servicios -->
+<section id="services" class="py-5 position-relative text-white" style="background: url('http://localhost:82/tierrafertil/resources/assets/46614.jpg') center/cover no-repeat fixed;">
+  <!-- Superposición oscura para mejorar la legibilidad -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.5);"></div>
+  
+  <!-- Contenido de la sección -->
+  <div class="container position-relative z-index-1">
+    <h2 class="fw-bold text-center text-white mb-5">Nuestros Servicios</h2>
+    <div class="row">
+      <!-- Servicio 1 -->
+      <div class="col-md-6 d-flex align-items-center mb-4">
+        <div class="icon-box d-flex align-items-center p-4 bg-white bg-opacity-75 rounded shadow">
+          <i class="service-icon bi bi-capslock-fill fs-1 text-success me-4"></i>
+          <div>
+            <h4 class="text-dark mt-0">Asesoramiento Técnico</h4>
+            <p class="text-dark mb-0">Ofrecemos orientación especializada para mejorar la producción agrícola de nuestros socios.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 2 -->
+      <div class="col-md-6 d-flex align-items-center mb-4">
+        <div class="icon-box d-flex align-items-center p-4 bg-white bg-opacity-75 rounded shadow">
+          <i class="service-icon bi bi-basket fs-1 text-warning me-4"></i>
+          <div>
+            <h4 class="text-dark mt-0">Comercialización</h4>
+            <p class="text-dark mb-0">Facilitamos el acceso a mercados para maximizar el valor de los productos agrícolas.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 3 -->
+      <div class="col-md-6 d-flex align-items-center mb-4">
+        <div class="icon-box d-flex align-items-center p-4 bg-white bg-opacity-75 rounded shadow">
+          <i class="service-icon bi bi-people fs-1 text-info me-4"></i>
+          <div>
+            <h4 class="text-dark mt-0">Capacitación</h4>
+            <p class="text-dark mb-0">Organizamos talleres y cursos para empoderar a nuestros agricultores con conocimientos modernos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+!--esta es de los testimonios por si acaso:
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center">Testimonios</h2>
+
+    <!-- Testimonios con Carrusel -->
+    <div class="row justify-content-center text-center mt-5">
+    <div class="col-md-10">
+        <div id="testimoniosCarrusel" class="shadow carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Testimonio 1 -->
+            <div class="carousel-item active">
+            <div class="card border-0 shadow-sm p-4">
+                <div class="row align-items-center">
+                <!-- Comentario -->
+                <div class="col-lg-9">
+                    <p class="text-muted fst-italic mb-3">
+                    "Gracias a Tierra Fértil, mi familia ahora tiene acceso a herramientas y conocimientos para maximizar nuestra producción sin dañar el medio ambiente."
+                    </p>
+                    <h5 class="fw-semibold mb-0">Juan Pérez</h5>
+                    <span class="text-muted small">Agricultor asociado</span>
+                </div>
+                <!-- Imagen -->
+                <div class="col-lg-3 text-center">
+                    <div class="testimonial-img-wrapper">
+                    <img 
+                        src="https://www.shutterstock.com/image-photo/portrait-senior-farmer-corn-field-600nw-2514319495.jpg" 
+                        alt="Juan Pérez" 
+                        class="img-fluid rounded-circle shadow"
+                    >
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- Testimonio 2 -->
+            <div class="carousel-item">
+            <div class="card border-0 shadow-sm p-4">
+                <div class="row align-items-center">
+                <!-- Comentario -->
+                <div class="col-lg-9">
+                    <p class="text-muted fst-italic mb-3">
+                    "Unirnos a Tierra Fértil nos permitió diversificar nuestros cultivos y mejorar la calidad de vida en nuestra comunidad."
+                    </p>
+                    <h5 class="fw-semibold mb-0">María López</h5>
+                    <span class="text-muted small">Agricultora asociada</span>
+                </div>
+                <!-- Imagen -->
+                <div class="col-lg-3 text-center">
+                    <div class="testimonial-img-wrapper">
+                    <img 
+                        src="https://img.freepik.com/foto-gratis/anciana-sosteniendo-canasta-llena-verduras_23-2148580035.jpg" 
+                        alt="María López" 
+                        class="img-fluid rounded-circle shadow"
+                    >
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- Testimonio 3 -->
+            <div class="carousel-item">
+            <div class="card border-0 shadow-sm p-4">
+                <div class="row align-items-center">
+                <!-- Comentario -->
+                <div class="col-lg-9">
+                    <p class="text-muted fst-italic mb-3">
+                    "Estamos orgullosos de ser parte de una cooperativa que valora tanto la sostenibilidad como el bienestar de sus socios."
+                    </p>
+                    <h5 class="fw-semibold mb-0">Carlos Rodríguez</h5>
+                    <span class="text-muted small">Agricultor asociado</span>
+                </div>
+                <!-- Imagen -->
+                <div class="col-lg-3 text-center">
+                    <div class="testimonial-img-wrapper">
+                    <img 
+                        src="https://static.vecteezy.com/ti/fotos-gratis/t1/30745389-retrato-agricultor-colheita-legumes-ai-generativo-foto.jpg" 
+                        alt="Carlos Rodríguez" 
+                        class="img-fluid rounded-circle shadow"
+                    >
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimoniosCarrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimoniosCarrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+
+!--- reemplace los testimonios por una seccion de noticias ajsjasja
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-success text-center">Testimonios</h2>
+
+    <!-- Testimonios con Carrusel -->
+    <div class="row justify-content-center text-center mt-5">
+    <div class="col-md-10">
+        <div id="testimoniosCarrusel" class="shadow carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Testimonio 1 -->
+            <div class="carousel-item active">
+            <div class="card border-0 shadow-sm p-4">
+                <div class="row align-items-center">
+                <!-- Comentario -->
+                <div class="col-lg-9">
+                    <p class="text-muted fst-italic mb-3">
+                    "Gracias a Tierra Fértil, mi familia ahora tiene acceso a herramientas y conocimientos para maximizar nuestra producción sin dañar el medio ambiente."
+                    </p>
+                    <h5 class="fw-semibold mb-0">Juan Pérez</h5>
+                    <span class="text-muted small">Agricultor asociado</span>
+                </div>
+                <!-- Imagen -->
+                <div class="col-lg-3 text-center">
+                    <div class="testimonial-img-wrapper">
+                    <img 
+                        src="https://www.shutterstock.com/image-photo/portrait-senior-farmer-corn-field-600nw-2514319495.jpg" 
+                        alt="Juan Pérez" 
+                        class="img-fluid rounded-circle shadow"
+                    >
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- Testimonio 2 -->
+            <div class="carousel-item">
+            <div class="card border-0 shadow-sm p-4">
+                <div class="row align-items-center">
+                <!-- Comentario -->
+                <div class="col-lg-9">
+                    <p class="text-muted fst-italic mb-3">
+                    "Unirnos a Tierra Fértil nos permitió diversificar nuestros cultivos y mejorar la calidad de vida en nuestra comunidad."
+                    </p>
+                    <h5 class="fw-semibold mb-0">María López</h5>
+                    <span class="text-muted small">Agricultora asociada</span>
+                </div>
+                <!-- Imagen -->
+                <div class="col-lg-3 text-center">
+                    <div class="testimonial-img-wrapper">
+                    <img 
+                        src="https://img.freepik.com/foto-gratis/anciana-sosteniendo-canasta-llena-verduras_23-2148580035.jpg" 
+                        alt="María López" 
+                        class="img-fluid rounded-circle shadow"
+                    >
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- Testimonio 3 -->
+            <div class="carousel-item">
+            <div class="card border-0 shadow-sm p-4">
+                <div class="row align-items-center">
+                <!-- Comentario -->
+                <div class="col-lg-9">
+                    <p class="text-muted fst-italic mb-3">
+                    "Estamos orgullosos de ser parte de una cooperativa que valora tanto la sostenibilidad como el bienestar de sus socios."
+                    </p>
+                    <h5 class="fw-semibold mb-0">Carlos Rodríguez</h5>
+                    <span class="text-muted small">Agricultor asociado</span>
+                </div>
+                <!-- Imagen -->
+                <div class="col-lg-3 text-center">
+                    <div class="testimonial-img-wrapper">
+                    <img 
+                        src="https://static.vecteezy.com/ti/fotos-gratis/t1/30745389-retrato-agricultor-colheita-legumes-ai-generativo-foto.jpg" 
+                        alt="Carlos Rodríguez" 
+                        class="img-fluid rounded-circle shadow"
+                    >
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimoniosCarrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimoniosCarrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+pero deje los testimonios por si acaso los quiera volver a rehusar asjasajaj
+
+
+
+este es de un boton de whatsapp chetado
+
+<a href="javascript:void(0);" class="btn-whatsapp" id="whatsappButton">
+  <i class="bi bi-whatsapp" id="whatsappIcon"></i>
+</a>
+
+<div id="whatsappPopup" class="popup">
+  <div class="popup-content">
+    <p class="popup-text">Inicia una conversación</p>
+    <a href="https://wa.me/+51947492128" target="_blank" class="popup-btn">
+      <i class="bi bi-whatsapp"></i> Tierra Fertil WhatsApp
+    </a>
+  </div>
+</div>
+
+<style>
+/* Estilos para el botón de WhatsApp chetado */
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp.x {
+  background-color: red;
+  transform: rotate(180deg);
+}
+
+/* Ventana popup del boton, esta va a salir al dar click */
+.popup {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  width: 250px;
+  z-index: 10000;
+}
+
+/* Este es el texto que va a tener el popup */
+.popup-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+/* El boton que redirige a whatsapp lo puse recatangular
+   con bordes un poco redondeados */
+.popup-btn {
+  display: flex;
+  align-items: center;
+  background-color: #25d366;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.popup-btn i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+</style>
+
+<script>
+const whatsappButton = document.querySelector(".btn-whatsapp");
+const whatsappIcon = whatsappButton.querySelector("i");
+const whatsappPopup = document.querySelector(".popup");
+
+// Evento del click del boton de whatsapp
+whatsappButton.addEventListener("click", function (e) {
+  e.preventDefault(); 
+
+  // Si el popup está visible, entoces lo cierro
+  if (whatsappPopup.style.display === "block") {
+    // Cierro el popup
+    whatsappPopup.style.display = "none";
+    // Cambio al icono de whatsapp
+    whatsappButton.classList.remove("x");
+    whatsappIcon.classList.remove("bi-x");
+    whatsappIcon.classList.add("bi-whatsapp");
+  } 
+  // Sino entonces abro el popup
+  else {
+    // Abro el popup
+    whatsappPopup.style.display = "block";
+    // Cambio el ícono a "X "
+    whatsappButton.classList.add("x");
+    whatsappIcon.classList.remove("bi-whatsapp");
+    whatsappIcon.classList.add("bi-x");
+  }
+});
+
+
+</script>

@@ -1,0 +1,17 @@
+.testimonial-img-wrapper {
+    width: 100px; /* Tamaño fijo para el ancho */
+    height: 100px; /* Tamaño fijo para la altura */
+    overflow: hidden; /* Oculta el contenido fuera del contenedor */
+    border-radius: 50%; /* Convierte el contenedor en un círculo */
+    display: flex; /* Centra la imagen dentro */
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Asegura que esté centrado */
+  }
+  
+  .testimonial-img-wrapper img {
+    width: 100%; /* Ajusta la imagen al contenedor */
+    height: 100%; /* Mantén la proporción */
+    object-fit: cover; /* Recorta la imagen para llenar el círculo */
+  }
+  

@@ -1,0 +1,36 @@
+body{
+    font-family: Montserrat, sans-serif;
+    
+}
+
+.bg_degradado{
+    /*background: linear-gradient(to right, #60b907, #008000);*/
+    /*background: linear-gradient(to right, #579f0f, #066a06);*/
+    /*background: linear-gradient(to right, #139f0f, #066a1f);*/
+    background: linear-gradient(to right, #0d7d0c, #05471a);
+}
+
+.bg_degradado_reves{
+    /*background: linear-gradient(to right, #066a06, #579f0f);*/
+    /*background: linear-gradient(to left, #139f0f, #066a1f);*/
+    background: linear-gradient(to bottom, rgba(248, 249, 250, 1), rgba(248, 249, 250, 0.8), rgba(248, 249, 250, 0.4));
+}
+
+.input-group .icon-settings {
+    background-color: transparent; /* Fondo transparente para el ícono */
+    border: none; /* Sin borde para el ícono */
+}
+
+.input-group .form-control:focus {
+    box-shadow: none; /* Sin sombra al enfocar */
+    border-color: #007bff; /* Cambia el color del borde al enfocar, puedes ajustarlo a tu gusto */
+}
+
+.input-group .form-select:focus{
+    box-shadow: none; /* Sin sombra al enfocar en el selector*/
+    border-color: #007bff; /* Cambia el color del borde al enfocar, puedes ajustarlo a tu gusto */
+}
+.input-group .round-edges {
+    border-radius: 25px; /* Bordes más redondeados */
+    padding-left: 40px; /* Espacio a la izquierda para el ícono */
+}

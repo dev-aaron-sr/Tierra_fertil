@@ -1,0 +1,247 @@
+.hero-content {
+  z-index: 1;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #28a745;
+}
+
+.testimonial-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-success {
+  color: #28a745;
+  /* Verde existente */
+}
+
+.text-green-yellow {
+  color: #64bd3d;
+  /* Verde pasto */
+  transition: font-size 0.3s linear;
+}
+
+.texto_navbar {
+  font-family: Montserrat, sans-serif;
+}
+
+.nav-item {
+  padding: 5px;
+}
+
+/* Ítem activo por defecto */
+.navbar-nav .nav-link.active {
+  /*color: #10882c;*/
+  color: #09611d;
+  /* Verde */
+  border-bottom: 2px solid #10882c;
+  /* Subrayado verde */
+}
+
+/* Mantén los estilos de hover */
+.navbar-nav .nav-link {
+  color: #000;
+  /* Negro por defecto */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  /*color: #28a745; /* Verde en hover */
+  /*color: #10882c;*/
+  color: #09611d;
+  border-bottom: 2px solid #10882c;
+  /* Subrayado verde en hover */
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+}
+/* Para pantallas medianas-grandes (tablets-laptop) */
+@media (max-width: 992px) {
+  .logo-atencion{
+    height: 200px;
+  }
+}
+/* Para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    width: 100px;
+    height: 100px;
+  }
+  .testimonial-img-wrapper {
+    width: 150px !important; /* Tamaño fijo para el ancho */
+    height: 150px !important; /* Tamaño fijo para la altura */
+  }
+  .logo-atencion{
+    height: 200px;
+  }
+}
+
+/* Para pantallas pequeñas (teléfonos) */
+@media (max-width: 576px) {
+  .navbar-brand img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .text-green-yellow {
+    font-size: 15px;
+  }
+  .testimonial-img-wrapper {
+    width: 100px !important; /* Tamaño fijo para el ancho */
+    height: 100px !important; /* Tamaño fijo para la altura */
+  }
+  .logo-atencion{
+    height: 150px;
+  }
+}
+
+.navbar-brand img {
+  height: 100px;
+  /* Altura inicial */
+  transition: height 0.3s, width 0.3s linear;
+}
+
+.navbar.scrolled .navbar-brand img {
+  width: 80px;
+  /* Altura reducida */
+  height: 80px;
+  /*transition: height 0.3s, width 0.3s, linear;*/
+}
+
+.navbar.scrolled .text-green-yellow {
+  font-size: 15px;
+}
+
+.dropdown-menu-custom {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  z-index: 1050;
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  /* Evita desbordamiento */
+  max-height: 0;
+  /* Inicialmente colapsado */
+  opacity: 0;
+  /* Invisible inicialmente */
+  visibility: hidden;
+  /* Oculta visualmente cuando está cerrado */
+  transition: max-height 1s ease, opacity 0.2s ease, transform 1s ease;
+}
+
+.dropdown-menu-custom.show {
+  max-height: 300px;
+  /* Altura máxima al expandirse */
+  opacity: 1;
+  /* Visible al expandirse */
+  visibility: visible;
+  /* Asegura que sea visible */
+  transform: translate(-50%, 0);
+  /* Sin desplazamiento vertical */
+}
+
+.dropdown-menu-custom:not(.show) {
+  /*transform: translate(-50%, -10px); /* Devuelve el desplazamiento inicial 
+        visibility: hidden; /* Oculta al cerrarse */
+  max-height: 0;
+  /* Enrolla al cerrarse */
+  opacity: 0;
+  /* Se desvanece */
+  transform: translate(-50%, -10px);
+  /* Regresa al desplazamiento inicial */
+  visibility: hidden;
+  /* Oculta después de la animación */
+}
+
+.dropdown-menu-custom .nav-item{
+  padding-left: 10px;
+}
+.dropdown-menu-custom .active{
+  padding-left: 8px;
+}
+
+.btn_desplega_navbar {
+  border: none;
+}
+
+.btn_desplega_navbar:focus {
+  border: 0px !important;
+  box-shadow: none;
+}
+
+.btn_desplega_navbar_icon {
+  font-size: 32px;
+}
+
+.btn_desplega_navbar_icon:hover {
+  color: green;
+}
+
+
+.btn-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  /* Distancia desde la parte inferior */
+  right: 25px;
+  /* Distancia desde la derecha */
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.1);
+}
+
+.btn-whatsapp i {
+  font-size: 28px;
+}
+
+
+.testimonial-img-wrapper {
+  width: 180px; /* Tamaño fijo para el ancho */
+  height: 180px; /* Tamaño fijo para la altura */
+  overflow: hidden; /* Oculta el contenido fuera del contenedor */
+  border-radius: 50%; /* Convierte el contenedor en un círculo */
+  display: flex; /* Centra la imagen dentro */
+  justify-content: center;
+  align-items: center;
+  margin: auto; /* Asegura que esté centrado */
+}
+
+.testimonial-img-wrapper img {
+  width: 100%; /* Ajusta la imagen al contenedor */
+  height: 100%; /* Mantén la proporción */
+  object-fit: cover; /* Recorta la imagen para llenar el círculo */
+}
