@@ -1,78 +1,133 @@
 <!-- Footer -->
-<!--footer class="text-center">
+<footer class="footer">
   <div class="container">
-    <p class="mb-0">&copy; 2024 Tierra Fértil. Todos los derechos reservados.</p>
-    <p>Diseñado por TecnoPlus Piura.</p>
-  </div>
-</footer-->
-<!-- Footer -->
-<footer class="text-center">
-  <div class="container">
-    <p class="mb-0">&copy; 2024 Tierra Fértil. Todos los derechos reservados.</p>
-    <p>Diseñado por TecnoPlus Piura.</p>
+    <div class="row align-items-start">
 
-    <!-- Opcional: Redes sociales -->
-    <div class="social-icons">
-      <a href="#" target="_blank" title="Facebook">
-        <i class="bi bi-facebook"></i></a>
-      <a href="#" target="_blank" title="Twitter">
-        <i class="bi bi-twitter"></i></a>
-      <a href="#" target="_blank" title="Instagram">
-        <i class="bi bi-instagram"></i></a>
-      <a href="#" target="_blank" title="LinkedIn">
-        <i class="bi bi-linkedin"></i></a>
+      <!-- Columna izquierda: "Logo y Contacto" -->
+      <div class="col-md-4 mb-4 text-start">
+        <div class="d-flex align-items-center mb-3">
+          <img src="resources/assets/logo_tierraFertil.svg" alt="Logo Tierra Fértil" style="max-height:60px;" class="me-2">
+          <h4 class="mb-0 text-white fw-bold">Tierra Fértil</h4>
+        </div>
+        <ul class="list-unstyled footer-list">
+          <li><i class="bi bi-telephone"></i> +51 947 492 128</li>
+          <li><i class="bi bi-envelope"></i> contacto@tierrraferitl.com</li>
+          <li><i class="bi bi-geo-alt"></i> Piura - Perú</li>
+          <li><i class="bi bi-clock"></i> Lun - Vie: 9:00am - 6:00pm</li>
+        </ul>
+      </div>
+
+      <!-- Columna centro: "Enlaces útiles" -->
+      <div class="col-md-4 mb-4 text-center">
+        <h5 class="fw-bold mb-3 text-white">Enlaces útiles</h5>
+        <ul class="list-unstyled footer-list">
+          <li><a href="#quienes-somos">¿Quiénes somos?</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#noticias">Noticias</a></li>
+          <li><a href="#unete">Únete</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna derecha: "Mas informacion" -->
+      <div class="col-md-4 mb-4 text-end">
+        <h5 class="fw-bold mb-3 text-white">Más información</h5>
+        <ul class="list-unstyled footer-list">
+          <li>
+            <a href="#libro-reclamaciones" class="d-flex align-items-center justify-content-end">
+              <img src="resources/assets/libro_reclamaciones.png" alt="Libro de Reclamaciones" class="me-2 libro-logo">
+              Libro de Reclamaciones
+            </a>
+          </li>
+          <li>
+            <a href="#faq" class="d-flex align-items-center justify-content-end">
+              <i class="bi bi-question-circle me-2"></i> Preguntas frecuentes
+            </a>
+          </li>
+        </ul>
+        <p class="mb-2">Síguenos en:</p>
+        <div class="social-icons">
+          <a href="#" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" target="_blank" title="X"><i class="bi bi-x"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Derechos -->
+    <div class="text-center mt-4">
+      <p class="mb-0">&copy; 2025 Tierra Fértil. Todos los derechos reservados.</p>
+      <p>Designed by Intelisoft</p>
     </div>
   </div>
 </footer>
 
-
-
 <style>
   /* Estilos del footer */
+  footer {
+    background-color: #353a40;
+    color: #f8f9fa;
+    padding: 50px 0 30px;
+  }
 
-footer .container {
-  max-width: 1200px; /* Ancho máximo para mejor alineación */
-  margin: 0 auto;
-  padding: 0 15px;
-}
+  footer .container {
+    max-width: 1200px;
+  }
 
-/* Títulos y texto en el footer */
-footer p {
-  font-size: 14px;
-  margin: 10px 0;
-}
+  footer h4, footer h5 {
+    color: #f8f9fa;
+  }
 
-footer p:last-child {
-  font-size: 13px;
-  color: #6c757d;
-}
+  footer p {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #f8f9fa;
+  }
 
-/* Íconos de redes sociales */
-footer .social-icons {
-  margin-top: 20px;
-}
+  footer p:last-child {
+    font-size: 13px;
+    color: #ced4da;
+  }
 
-footer .social-icons a {
-  color: #6c757d;
-  font-size: 18px;
-  margin: 0 10px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
+  .footer-list li {
+    padding: 5px 0;
+  }
 
-footer .social-icons a:hover {
-  color: #007bff;
-  transform: translateY(-3px); /* Hover con efecto sutil */
-}
+  .footer-list a {
+    color: #f8f9fa !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
 
-footer .social-icons a i {
-  transition: transform 0.3s ease;
-}
+  .footer-list a:hover {
+    color: #007bff !important;
+  }
 
-footer .social-icons a:hover i {
-  transform: scale(1.1); /* Aumenta el tamaño al hacer hover */
-}
+  /* Logo del libro de reclamaciones */
+  .libro-logo {
+    max-height: 26px;
+    width: auto;
+  }
 
+  /* Íconos sociales */
+  footer .social-icons {
+    margin-top: 10px;
+  }
+
+  footer .social-icons a {
+    color: #f8f9fa;
+    font-size: 18px;
+    margin: 0 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  footer .social-icons a:hover {
+    color: #007bff;
+    transform: translateY(-3px);
+  }
 </style>
+
+
 <!--a aria-label="Chat on WhatsApp" href="https://wa.me/51947492128"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenLarge.png" />
 </a-->
 <a href="https://wa.me/+51947492128" target="_blank" class="btn-whatsapp">
